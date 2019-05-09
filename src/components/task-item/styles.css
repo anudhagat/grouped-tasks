@@ -1,0 +1,27 @@
+.item {
+  display: flex;
+  font-size: 1rem;
+  border: none;
+  padding: 0 0.5em;
+  width: 100%;
+}
+
+.icon {
+  padding-right: 2rem;
+  align-self: center;
+  min-width: 1.5rem;
+}
+
+.locked {
+  color: #909090;
+  font-weight: bold;
+}
+
+.incomplete {
+  font-weight: bold;
+}
+
+.completed {
+  font-weight: bold;
+  text-decoration: line-through;
+}
