@@ -4,7 +4,7 @@ import './styles.css';
 
 function TaskItem({ task }) {
   const { task: taskName, completedAt, locked } = task;
-  const isComplete = completedAt !== null || completedAt !== undefined;
+  const isComplete = completedAt !== null && completedAt !== undefined;
 
   const [complete, setComplete] = useState(isComplete);
   const taskStyle = locked ? 'locked' : complete ? 'completed' : 'incomplete';
@@ -20,7 +20,7 @@ function TaskItem({ task }) {
       <input
         type="checkbox"
         checked={complete}
-        onClick={() => handleCompleteToggle(complete)}
+        onChange={() => handleCompleteToggle(complete)}
       />
 
       <span className="icon">
