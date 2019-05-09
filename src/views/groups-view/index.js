@@ -1,14 +1,23 @@
 import React from 'react';
 
-function Groups(props) {
-  const { setViewGroups } = props;
+export default function GroupsView(props) {
+  const { setViewGroups, groups, setSelectedGroup } = props;
+
+  function onGroupClick(groupName) {
+    setViewGroups(false);
+    setSelectedGroup(groupName);
+  }
 
   return (
     <div>
-      <button onClick={() => setViewGroups(false)}>Tasks </button>
       <div>Groups View</div>
+      {groups.map(group => {
+        return (
+          <button key={group.name} onClick={() => onGroupClick(group.name)}>
+            {group.name}
+          </button>
+        );
+      })}
     </div>
   );
 }
-
-export default Groups;
