@@ -8,7 +8,6 @@ function App() {
   const [viewGroups, setViewGroups] = useState(true);
   const [groups, setGroups] = useState([]);
   const [selectedGroup, setSelectedGroup] = useState();
-  const [groupTasks, setGroupTasks] = useState([]);
 
   useEffect(() => {
     fetchGroups().then(data => {

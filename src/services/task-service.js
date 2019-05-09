@@ -20,6 +20,7 @@ export function fetchGroups() {
       };
     }
   }
+  // return a promise with a set timeout to simulate a backend api fetch
   return new Promise((resolve, reject) => {
     setTimeout(() => resolve(Object.values(hash)), 400);
   });
@@ -48,6 +49,8 @@ export function fetchTasks(group) {
       }, false);
     }
   }
+
+  // return a promise with a set timeout to simulate a backend api fetch
   return new Promise((resolve, reject) => {
     setTimeout(() => resolve(tasks), 400);
   });
